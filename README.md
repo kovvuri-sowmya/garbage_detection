@@ -68,7 +68,7 @@ After rigorous experimentation and training, our best model achieved an accuracy
 To use this project, follow these steps:
 
 ```javascript
-git clone https://github.com/your_username/garbage-classification.git
+git clone https://github.com/kovvuri-sowmya/garbage_detection.git
 
 ```
 2.Install the required dependencies:
