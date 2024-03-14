@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block main %}
+<ul class="l-main-content main-content">
+    <li class="l-section section section--is-active">
+        <div class="work">
+            <div class="work--lockup">
+                <ul class="slider">
+                    <li class="slider--item slider--item-center">
+                        {% csrf_token %}
+                        <div class="slider--item-image">
+                            <img src="{{path}}" alt="Metiew and Smith">
+                        </div>
+                        <br>
+                        <br>
+                        <p class="slider--item-description" style="text-transform: capitalize;" <strong>{{text}} <br>
+                            {{a}}</strong> </p>
+                        <br>
+
+                        <a href="/" class="btn btn-info">Predict again</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+</ul>
+</div>
+</div>
+</div>
+
+{%endblock%}

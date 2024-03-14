@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block main %}
+<ul class="l-main-content main-content">
+  <li class="l-section section section--is-active">
+    <div class="intro">
+      <div class="intro--banner">
+        <h1>Deep Learning  <br>Techniques for<br>Garbage Classification</h1>
+
+        <img src="static/img/introduction-visual.png" alt="Welcome">
+      </div>
+
+    </div>
+  </li>
+  <li class="l-section section">
+    <div class="work">
+      <h2>About Project</h2>
+      <div class="work--lockup">
+        <ul class="slider">
+          <li class="slider--item slider--item-left">
+            <a href="#0">
+              <div class="slider--item-image">
+                <img src="static/img/work-victory.jpg" alt="Victory">
+              </div>
+              <p class="slider--item-title">Garbage Classification</p>
+              <p class="slider--item-description">A Treatise on Economics is a work by the Austrian economist and
+                philosopher Ludwig von Mises. Widely considered Mises' magnum opus, it presents the case for
+                laissez-faire capitalism based on praxeology, his method to understand the structure of human
+                decision-making</p>
+            </a>
+          </li>
+          <li class="slider--item slider--item-center">
+            <a href="#0">
+              <div class="slider--item-image">
+                <img src="static/img/work-metiew-smith.jpg" alt="Metiew and Smith">
+              </div>
+              <p class="slider--item-title">Deep &amp; Learning</p>
+              <p class="slider--item-description">To lessen the mounting burden on landfills, recycling household and industrial waste has been suggested as a viable solution. However, effective waste management requires proper segregation of waste types as each category requires different treatment. The current segregation process involves manual sorting which can be time-consuming and Workforce-intensive. In this study, a novel approach using deep learning techniques was utilized to automatically classify waste based on its image into six distinct types: paper, metal, plastic, glass, trash and cardboard. 
+              </p>
+            </a>
+          </li>
+          <li class="slider--item slider--item-right">
+            <a href="#0">
+              <div class="slider--item-image">
+                <img src="static/img/work-alex-nowak.jpg" alt="Alex Nowak">
+              </div>
+              <p class="slider--item-title">Convolutional Neural Network</p>
+              <p class="slider--item-description">Deep Learning algorithm that can take in an input image, assign
+                importance (learnable weights and biases) to various aspects/objects in the image, and be able to
+                differentiate one from the other.</p>
+            </a>
+          </li>
+        </ul>
+        <div class="slider--prev">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+              <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z" />
+            </g>
+          </svg>
+        </div>
+        <div class="slider--next">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+            <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+              <path
+                d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="l-section section">
+    <div class="about">
+      <div class="about--banner">
+        <form action="{% url 'result' %}" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <h2 style="margin-top:0%; margin-bottom: 0%;">Upload Image</h2>
+          <div class="form-group">
+            <label for="file">Select image:</label>
+            <input type="file" id="image" name="file">
+          </div>
+          <div class="form-group">
+            <label for="category">Models:</label>
+            <select id="category" name="alg">
+              <option value="-1">CNN Model </option>
+              <!-- <option value="1"></option>
+              <option value="2">Mobilenet Model</option> -->
+            </select>
+          </div>
+          <button type="submit">Upload</button>
+        </form>
+
+      </div>
+    </div>
+  </li>
+  <li class="l-section section">
+   <!-- <div class="contact">
+      <a href="/prediction">
+        <div class="sonar-wrapper" style="padding-top: 303px;">
+          <div class="sonar-emitter">
+
+            <div class="sonar-wave" style="color: black; font-size: small;">Live Stream</div>
+
+          </div>
+        </div>
+      </a>
+
+    </div> -->
+    </div>
+    </div>
+  </li>
+</ul>
+</div>
+</div>
+</div>
+{%endblock%}
